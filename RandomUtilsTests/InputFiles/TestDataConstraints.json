@@ -1,0 +1,76 @@
+﻿{
+  "Aspect": [
+    {
+      "PropertyName": "testString1",
+      "ClassName": "TestObjectAlpha",
+      "Required": true,
+      "Minimum": 1,
+      "Maximum": 5
+    },
+    {
+      "PropertyName": "testInt1",
+      "Required": true,
+      "Maximum": 10
+    },
+    {
+      "PropertyName": "testString2",
+      "Required": false,
+      "Minimum": 3,
+      "Maximum": 25,
+      "StringType": "All"
+    },
+    {
+      "PropertyName": "testBeta1",
+      "Required": true
+    },
+    {
+      "PropertyName": "testBool1",
+      "Required": true
+    },
+    {
+      "PropertyName": "testString1",
+      "ClassName": "TestObjectBeta",
+      "Required": false,
+      "Minimum": 6,
+      "Maximum": 40,
+      "StringType": "Regex",
+      "RegexPattern": "Gr8 [A-Za-z]{2,36}"
+    },
+    {
+      "PropertyName": "testDateTime1",
+      "Required": true,
+      "EarliestDateTime": "01/01/2015 00:00:00",
+      "LatestDateTime": "01/01/2016 00:00:00"
+    },
+    {
+      "PropertyName": "testIList1",
+      "Minimum":  1
+    },
+    {
+      "PropertyName": "deltas",
+      "Required": true,
+      "MinimumLength": 1,
+      "MaximumLength": 5
+    },
+    {
+      "PropertyName": "testString1",
+      "ClassName": "TestObjectDelta",
+      "Required": "false",
+      "Minimum": "0",
+      "Maximum": "25"
+    },
+    {
+      "PropertyName": "testStringArray1",
+      "Required": "false",
+      "Minimum": "0",
+      "Maximum": "25",
+      "MinimumLength": "1",
+      "MaximumLength": "10",
+      "StringType": "Alphabetic"
+    },
+    {
+      "PropertyName": "testObjectBeta",
+      "Required": "true"
+    }
+  ]
+}

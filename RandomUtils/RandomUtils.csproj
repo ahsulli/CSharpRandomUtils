@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB0A3404-4C86-4A2C-B307-F32972CD8DF6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RandomUtils</RootNamespace>
+    <AssemblyName>RandomUtils</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\RandomUtils.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fare, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fare.1.0.3\lib\net35\Fare.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\Collections\CollectionItemConcreteTypeAttribute.cs" />
+    <Compile Include="Attributes\Collections\CollectionItemValidatorAttribute.cs" />
+    <Compile Include="Attributes\Collections\MinimumLengthAttribute.cs" />
+    <Compile Include="Attributes\Collections\MaximumLengthAttribute.cs" />
+    <Compile Include="Attributes\LatestDateAttribute.cs" />
+    <Compile Include="Attributes\StringTypeAttribute.cs" />
+    <Compile Include="Attributes\MaximumAttribute.cs" />
+    <Compile Include="Attributes\EarliestDateAttribute.cs" />
+    <Compile Include="Attributes\MinimumAttribute.cs" />
+    <Compile Include="Attributes\ConcreteTypeAttribute.cs" />
+    <Compile Include="Attributes\RandomizerIgnoreAttribute.cs" />
+    <Compile Include="Attributes\RequiredAttribute.cs" />
+    <Compile Include="Attributes\ValidatorAttribute.cs" />
+    <Compile Include="Attributes\ValueAttribute.cs" />
+    <Compile Include="Enums\DataFileType.cs" />
+    <Compile Include="Enums\StringType.cs" />
+    <Compile Include="Enums\ValueType.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Parameterization\AspectModel.cs" />
+    <Compile Include="Parameterization\DefaultValues.cs" />
+    <Compile Include="Parameterization\IXmlDeserialization.cs" />
+    <Compile Include="Parameterization\StringConstants.cs" />
+    <Compile Include="Parameterization\Parser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Randomizer\IRandomGenerator.cs" />
+    <Compile Include="Randomizer\TypeGenerators\IRandomTypeGenerator.cs" />
+    <Compile Include="Randomizer\TypeGenerators\RandomBooleanGenerator.cs" />
+    <Compile Include="Randomizer\TypeGenerators\RandomDateTimeGenerator.cs" />
+    <Compile Include="Randomizer\RandomGenerator.cs" />
+    <Compile Include="Randomizer\TypeGenerators\RandomIntGenerator.cs" />
+    <Compile Include="Randomizer\TypeGenerators\RandomStringGenerator.cs" />
+    <Compile Include="Randomizer\RandomValueConverter.cs" />
+    <Compile Include="Randomizer\TypeGenerators\TypeGenerator.cs" />
+    <Compile Include="Reflection\Aspect.cs" />
+    <Compile Include="Reflection\BaseReflector.cs" />
+    <Compile Include="Reflection\ReflectionUtilities.cs" />
+    <Compile Include="Reflection\Reflector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Parameterization\UnicodeChart.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

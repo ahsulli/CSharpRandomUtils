@@ -1,0 +1,13 @@
+﻿PropertyName;ClassName;Required;Minimum;Maximum;MinimumLength;MaximumLength;EarliestDateTime;LatestDateTime;StringType;RegexPattern
+testString1;TestObjectAlpha;true;1;5;;;;;;
+testInt1;;true;;10;;;;;;
+testString2;;false;3;25;;;;;All;
+testBeta1;;true;;;;;;;;;
+testBool1;;true;;;;;;;;;
+testString1;TestObjectBeta;false;6;40;;;;;Regex;Gr8 [A-Za-z]{2,36}
+testDateTime1;;true;;;;;01/01/2015 00:00:00;01/01/2016 00:00:00;;
+testIList1;;;1;;;;;;;
+deltas;;true;;;1;5;;;;;
+testString1;TestObjectDelta;false;0;25;;;;;;
+testStringArray1;;false;0;25;1;10;;;Alphabetic;
+testObjectBeta;;true;;;;;;;;;
